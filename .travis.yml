@@ -1,0 +1,39 @@
+language: python
+node_js:
+  - 3.6.8
+branches:
+  only:
+  - mkdocs_blog
+
+notifications:
+  email:
+    recipients:
+      - zhengxinzhibs@gmail.com
+    on_success: always # default: change
+    on_failure: always # default: alway
+cache:
+  directories:
+  - build
+  yarn: true
+before_install:
+- export TZ='Asia/Shanghai'  # 设置时区
+install:
+ - pip install -r blog.requirement
+script:
+- mkdocs build -c
+
+after_script:
+   - cd site/
+   - git init
+   - git config user.name "spaceplayer"
+   - git config user.email "zhengxinzhibs@gmail.com"
+   - git add .
+   - git commit -m "Update sphinx By TravisCI With Build $TRAVIS_BUILD_NUMBER"
+   - git push --force --quiet "https://spaceplayer:${CO_TOKEN}@${CO_REF}" master:master
+   - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
+
+env:
+ global:
+   # Coding Pages
+   # - CO_REF: git.dev.tencent.com/zhishengqianjun/blog.git
+   - GH_REF: spaceplayer/mkdocs_blog.git
