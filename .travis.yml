@@ -29,11 +29,11 @@ after_script:
    - git config user.email "zhengxinzhibs@gmail.com"
    - git add .
    - git commit -m "Update sphinx By TravisCI With Build $TRAVIS_BUILD_NUMBER"
-   - git push --force --quiet "https://spaceplayer:${CO_TOKEN}@${CO_REF}" master:master
+   # - git push --force --quiet "https://spaceplayer:${CO_TOKEN}@${CO_REF}" master:master
    - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
 
 env:
  global:
    # Coding Pages
    # - CO_REF: git.dev.tencent.com/zhishengqianjun/blog.git
-   - GH_REF: spaceplayer/mkdocs_blog.git
+   - GH_REF: github.com/spaceplayer/mkdocs_blog.git
