@@ -3,7 +3,7 @@ node_js:
   - 3.6.8
 branches:
   only:
-  - mkdocs_blog
+  - master
 
 notifications:
   email:
@@ -36,4 +36,4 @@ env:
  global:
    # Coding Pages
    # - CO_REF: git.dev.tencent.com/zhishengqianjun/blog.git
-   - GH_REF: github.com/spaceplayer/mkdocs_blog.git
+  - GH_REF: github.com/spaceplayer/spaceplayer.github.io
