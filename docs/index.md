@@ -1,17 +1,13 @@
-# MkLorum
+# 新志的个人小站
 
-For full documentation visit [mkdocs.org](https://mkdocs.org).
+本站主要是新志的个人笔记及思考，类目如下
+  - 算法与数据结构
+  - 推荐系统
+  - 机器学习
+  - 深度学习
+  - 强化学习
+  - 常用工具
+  - 读书笔记
+  - 随笔记事
+  - 年度计划
 
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs help` - Print this help message.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.

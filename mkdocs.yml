@@ -1,11 +1,45 @@
 # Project information
-site_name: '进击的技术'
+site_name: '新志小站'
 site_description: '...'
 site_author: 'xinzhi'
 # site_url: 'https://aisky.men'
 
+# Repository
+repo_name: 'spaceplayer/mkdocs_blog'
+repo_url: 'https://github.com/spaceplayer/mkdocs_blog'
+edit_uri: 'blob/mkdocs_blog/docs/'
+
+# Copyright
+# copyright: 'Copyright &copy; <a href="http://beian.miit.gov.cn">京ICP备19057374号-1</a>'
+
+
+use_directory_urls: false
+
 
 nav:
-    - Home: index.md
-    - About: about.md
-# theme: readthedocs 
+    - '首页': 
+      - index.md
+    - '算法与数据结构':
+      - '算法': 
+        - '动态规划': xxx
+      - '题目':
+        - 'LeetCode题目总结': 算法/LeetCode题目总结.md
+        - '剑指offer': 算法/剑指offer.md
+        - '面试题总结': 算法/面试题总结.md
+    - '推荐系统': xxx
+    - '机器学习': xxx
+    - '深度学习': xxx
+    - '强化学习': xxx
+    - '语言学习':
+      - 'C++':
+        - 'C++笔记': 语言/C++笔记.md
+      - 'Python':
+        - 'Python笔记': 语言/Python笔记.md
+    - '常用工具':
+      - '如何构建自己的博客': 工具/如何构建自己的博客.md
+    - '读书笔记': xxx
+    - '随笔记事': xxx
+    - '年度计划': xxx
+
+
+
