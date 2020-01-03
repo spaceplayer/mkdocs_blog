@@ -1,4 +1,10 @@
-site_name: MkLorum
+# Project information
+site_name: '进击的技术'
+site_description: '...'
+site_author: 'xinzhi'
+# site_url: 'https://aisky.men'
+
+
 nav:
     - Home: index.md
     - About: about.md
