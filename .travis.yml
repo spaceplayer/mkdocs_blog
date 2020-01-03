@@ -28,7 +28,7 @@ install:
 
 # build 生成的最终网站会在site目录内，–clean参数保证构建的时候site文件夹内没有多余文件
 script:
-- mkdocs build -clean
+- mkdocs build -c
 
 # 部署
 after_script:
