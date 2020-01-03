@@ -19,6 +19,7 @@ use_directory_urls: false
 nav:
     - '首页': 
       - index.md
+
     - '算法与数据结构':
       - '算法': 
         - '动态规划': xxx
@@ -26,7 +27,10 @@ nav:
         - 'LeetCode题目总结': 算法/LeetCode题目总结.md
         - '剑指offer': 算法/剑指offer.md
         - '面试题总结': 算法/面试题总结.md
+
     - '推荐系统': xxx
+    - '自然语言处理': 
+      - '预处理模型': 自然语言处理/BERT及ERNIE学习.md
     - '机器学习': xxx
     - '深度学习': xxx
     - '强化学习': xxx
