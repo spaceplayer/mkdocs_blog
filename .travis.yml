@@ -1,3 +1,4 @@
+# 语言
 language: python
 python:
   - 3.6
@@ -25,9 +26,11 @@ before_install:
 install:
  - pip install -r blog.requirement
 
+# build 生成的最终网站会在site目录内，–clean参数保证构建的时候site文件夹内没有多余文件
 script:
-- mkdocs build -c
+- mkdocs build -clean
 
+# 部署
 after_script:
    - cd site/
    - git init
@@ -37,6 +40,7 @@ after_script:
    - git commit -m "Update sphinx By TravisCI With Build $TRAVIS_BUILD_NUMBER"
    - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
 
+# 环境变量
 env:
  global:
    # Coding Pages
