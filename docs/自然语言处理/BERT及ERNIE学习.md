@@ -35,13 +35,13 @@
 
 ​		编码组件是一系列编码器的堆叠（文章中是6个编码器的堆叠）, 解码部分也是同样的堆叠数。
 
-<img src="/Users/zhengxinzhi/typora_img/BERT及ERNIE学习/The_transformer_encoder_decoder_stack.png" alt="img" style="zoom:45%;" />
+<img src="http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/BERT及ERNIE学习/The_transformer_encoder_decoder_stack.png" alt="img" style="zoom:45%;" />
 
 
 
 ​		编码器在结构上都是一样的（但是它们不共享权重）。每个都可以分解成两个子模块：
 
-<img src="/Users/zhengxinzhi/typora_img/BERT及ERNIE学习/Transformer_decoder.png" alt="img" style="zoom:67%;" />
+<img src="http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/BERT及ERNIE学习/Transformer_decoder.png" alt="img" style="zoom:67%;" />
 
 ​		编码器的输入首先流经self-attention层，该层有助于编码器对特定单词编码时查看输入序列的其他单词。
 
@@ -53,7 +53,7 @@
 
 ​	
 
-<img src="/Users/zhengxinzhi/typora_img/BERT及ERNIE学习/17.png" alt="Transformer网络结构示意图"  />
+<img src="http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/BERT及ERNIE学习/17.png" alt="Transformer网络结构示意图"  />
 
 
 
@@ -92,19 +92,19 @@
 
 ​		**注意**这些新创建的向量的维度小于词嵌入向量(embedding vector)。它们（新创建的向量）的维度是64，而词嵌入和编码器的输入输出向量的维度是512。它们不必更小，这是一种架构选择，可以使多头注意力(multiheaded attention)计算不变。
 
-<img src="/Users/zhengxinzhi/typora_img/BERT及ERNIE学习/3.png" alt="q、k、v生成示意图" style="zoom:67%;" />
+<img src="http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/BERT及ERNIE学习/3.png" alt="q、k、v生成示意图" style="zoom:67%;" />
 
 **(2) 计算得分(score 权重)**
 
 ​		当我们在某个位置编码单词时，分数决定了对输入句子的其他部分放置多少的焦点(注意力)。
 
-<img src="/Users/zhengxinzhi/typora_img/BERT及ERNIE学习/4.png" alt="Scaled Dot-Product Attention示意图" style="zoom:67%;" />
+<img src="http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/BERT及ERNIE学习/4.png" alt="Scaled Dot-Product Attention示意图" style="zoom:67%;" />
 
-<img src="/Users/zhengxinzhi/typora_img/BERT及ERNIE学习/5.png" alt="归一化" style="zoom:67%;" />
+<img src="http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/BERT及ERNIE学习/5.png" alt="归一化" style="zoom:67%;" />
 
 **(3) 对加权值向量求和, 这样就产生了在这个位置的self-attention的输出**
 
-<img src="/Users/zhengxinzhi/typora_img/BERT及ERNIE学习/6.png" alt="得到最终结果" style="zoom:67%;" />
+<img src="http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/BERT及ERNIE学习/6.png" alt="得到最终结果" style="zoom:67%;" />
 
 **总结**
 
@@ -112,18 +112,18 @@
 
 ​		然而在真正的实现中，计算过程通过矩阵计算来进行，以便加快计算。
 
-![img](/Users/zhengxinzhi/typora_img/BERT及ERNIE学习/self-attention-matrix-calculation-2.png)
+![img](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/BERT及ERNIE学习/self-attention-matrix-calculation-2.png)
 
 
 
 
 ## 1.5 Multi-head Self-attention
 
-<img src="/Users/zhengxinzhi/typora_img/BERT及ERNIE学习/13.png" alt="Multi-head Self-attention-1" style="zoom: 67%;" />
+<img src="http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/BERT及ERNIE学习/13.png" alt="Multi-head Self-attention-1" style="zoom: 67%;" />
 
 
 
-<img src="/Users/zhengxinzhi/typora_img/BERT及ERNIE学习/v2-a20a0fbea8eb2777d44f87b89e7fee63_hd.jpg" alt="img" style="zoom: 75%;" />
+<img src="http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/BERT及ERNIE学习/v2-a20a0fbea8eb2777d44f87b89e7fee63_hd.jpg" alt="img" style="zoom: 75%;" />
 
 **作用**
 
@@ -136,11 +136,11 @@
 
 ​		论文中的$e^i$被直接加到了$a^i$上, 为什么不把$e^i$和$a^i$做concat呢, 由下图可知本质上就是做了位置的onthot和原始输入做了concat做一个矩阵映射得到的就是$e^i$与$a^i$的累加结果
 
-<img src="/Users/zhengxinzhi/typora_img/BERT及ERNIE学习/15.png" alt="位置编码" style="zoom:67%;" />
+<img src="http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/BERT及ERNIE学习/15.png" alt="位置编码" style="zoom:67%;" />
 
 ​		下图中，每一行对应一个向量的位置编码, 每行包含512个值—每个值介于-1到1之间。这里我们进行了涂色，使模式可见。该例子中共20个词（行），词嵌入向量维度为512维(列)。你可以看到中心区域分成两半。这是因为左边的值是由一个函数(正弦)产生的，右边的值是由另一个函数(余弦)产生的。然后将它们连接起来形成每个位置编码向量。
 
-<img src="/Users/zhengxinzhi/typora_img/BERT及ERNIE学习/v2-2842c0b22637515f19dc2c6b8802303a_hd.jpg" alt="img" style="zoom:33%;" />
+<img src="http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/BERT及ERNIE学习/v2-2842c0b22637515f19dc2c6b8802303a_hd.jpg" alt="img" style="zoom:33%;" />
 
 ​		位置编码的公式在文章(3.5节)有描述。你可以在 `get_timing_signal_1d()` 函数中看到用于生成位置编码的代码。这并不是生成位置编码的唯一方式。然而，它的优点在于可以扩展到看不见的序列长度（eg. 如果要翻译的句子的长度远长于训练集中最长的句子）。
 
@@ -176,7 +176,7 @@
 
 [Universal Transformer](https://ai.googleblog.com/2018/08/moving-beyond-translation-with.html)
 
-<img src="/Users/zhengxinzhi/typora_img/BERT及ERNIE学习/18.png" alt="Universal Transformer"  />
+<img src="http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/BERT及ERNIE学习/18.png" alt="Universal Transformer"  />
 
 ## 1.10 进一步学习
 
@@ -201,9 +201,9 @@
 
 # 二、预训练语言模型
 
-![图1 NLP Pre-training and Fine-tuning新范式及相关扩展工作](/Users/zhengxinzhi/typora_img/BERT及ERNIE学习/a67aa6b0b1fb153de0051e7eb3e8c632130233.png)
+![图1 NLP Pre-training and Fine-tuning新范式及相关扩展工作](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/BERT及ERNIE学习/a67aa6b0b1fb153de0051e7eb3e8c632130233.png)
 
-![image-20191207142614102](/Users/zhengxinzhi/typora_img/BERT及ERNIE学习/image-20191207142614102.png)
+![image-20191207142614102](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/BERT及ERNIE学习/image-20191207142614102.png)
 
 
 
@@ -219,11 +219,11 @@
 
 ## 3.1 ELMO思想起源
 
-<img src="/Users/zhengxinzhi/typora_img/BERT及ERNIE学习/image-20191208214521340.png" alt="image-20191208214521340" style="zoom: 33%;" />
+<img src="http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/BERT及ERNIE学习/image-20191208214521340.png" alt="image-20191208214521340" style="zoom: 33%;" />
 
 ​		尽管有不同的意思，但使用传统的word embedding的方法，相同的单词都会对应同样的embedding。但我们希望针对不同意思的bank，可以给出不同的embedding表示。
 
-<img src="/Users/zhengxinzhi/typora_img/BERT及ERNIE学习/image-20191208214536891.png" alt="image-20191208214536891" style="zoom:33%;" />
+<img src="http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/BERT及ERNIE学习/image-20191208214536891.png" alt="image-20191208214536891" style="zoom:33%;" />
 
 ​		根据上下文语境的不同，同一个单词bank我们希望能够得到不同的embedding，如果bank的意思是银行，我们期望它们之间的embedding能够相近，同时能够与河堤意思的bank相距较远。
 
@@ -233,19 +233,19 @@
 
 ​		ELMO是Embeddings from Language Model的简称，ELMO是《芝麻街》中的一个角色。它是一个RNN-based的语言模型，其任务是学习句子中的下一个单词或者前一个单词是什么。
 
-<img src="/Users/zhengxinzhi/typora_img/BERT及ERNIE学习/image-20191208214756647.png" alt="image-20191208214756647" style="zoom:33%;" />
+<img src="http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/BERT及ERNIE学习/image-20191208214756647.png" alt="image-20191208214756647" style="zoom:33%;" />
 
 ​		它是一个双向的RNN网络，这样每一个单词都对应两个hidden state，进行拼接便可以得到单词的Embedding表示。当同一个单词上下文不一样，得到的embedding就不同。
 
 ​		当然，我们也可以搞更多层：
 
-<img src="/Users/zhengxinzhi/typora_img/BERT及ERNIE学习/image-20191208214842994.png" alt="image-20191208214842994" style="zoom: 33%;" />
+<img src="http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/BERT及ERNIE学习/image-20191208214842994.png" alt="image-20191208214842994" style="zoom: 33%;" />
 
 ​		这么多层的RNN，内部每一层输出都是单词的一个表示，那我们取哪一层的输出来代表单词的embedding呢？在ELMO中，一个单词会得到多个embedding，对不同的embedding进行加权求和，可以得到最后的embedding用于下游任务。要说明一个这里的embedding个数，下图中只画了两层RNN输出的hidden state，其实输入到RNN的原始embedding也是需要的，所以你会看到说右下角的图片中，包含了三个embedding。
 
 ​		但不同的权重是基于下游任务学习出来的，上图中右下角给了5个不同的任务，其得到的embedding权重各不相同。
 
-<img src="/Users/zhengxinzhi/typora_img/BERT及ERNIE学习/image-20191208214923200.png" alt="image-20191208214923200" style="zoom:33%;" />
+<img src="http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/BERT及ERNIE学习/image-20191208214923200.png" alt="image-20191208214923200" style="zoom:33%;" />
 
 # 四、GPT [TODO]
 
@@ -273,15 +273,15 @@
 
 ## 5.2 BERT架构
 
-<img src="/Users/zhengxinzhi/typora_img/BERT及ERNIE学习/image-20191209153550527.png" alt="image-20191209153550527" style="zoom:50%;" />
+<img src="http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/BERT及ERNIE学习/image-20191209153550527.png" alt="image-20191209153550527" style="zoom:50%;" />
 
 ​		BERT框架有两步, pre-training和fine-tuning, 除输出层外, 这两个步骤架构是统一的。
 
-<img src="/Users/zhengxinzhi/typora_img/BERT及ERNIE学习/890083d95e1dc89888296e0991437dc7646898.png" alt="图2 BERT及Transformer网络结构示意图" style="zoom: 25%;" />
+<img src="http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/BERT及ERNIE学习/890083d95e1dc89888296e0991437dc7646898.png" alt="图2 BERT及Transformer网络结构示意图" style="zoom: 25%;" />
 
 ​		BERT模型基于多层双向Transformer Encoder实现。
 
-<img src="/Users/zhengxinzhi/typora_img/BERT及ERNIE学习/image-20191209153611754.png" alt="image-20191209153611754" style="zoom:50%;" />
+<img src="http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/BERT及ERNIE学习/image-20191209153611754.png" alt="image-20191209153611754" style="zoom:50%;" />
 
 ​		BERT的input embedding有token embedding + segment embedding + position embedding
 
@@ -290,7 +290,7 @@
 - 模型能够处理句间关系。为区别两个句子，用一个特殊标记符[SEP]进行分隔，另外针对不同的句子，将学习到的Segment Embeddings 加到每个Token的Embedding上。
 - 对于单句输入，只有一种Segment Embedding；对于句对输入，会有两种Segment Embedding。
 
-<img src="/Users/zhengxinzhi/typora_img/BERT及ERNIE学习/image-20191209180912464.png" alt="image-20191209180912464" style="zoom:50%;" />
+<img src="http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/BERT及ERNIE学习/image-20191209180912464.png" alt="image-20191209180912464" style="zoom:50%;" />
 
 ​		$BERT_{large}$的参数是层数(L=24)隐层结点数(H=1024)和self-attention头的个数(A=16), 总参数340M。(深而窄)
 
@@ -306,7 +306,7 @@
 
 ### Task 1: Masked LM
 
-<img src="/Users/zhengxinzhi/typora_img/BERT及ERNIE学习/image-20191208215140618.png" alt="image-20191208215140618" style="zoom:33%;" />
+<img src="http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/BERT及ERNIE学习/image-20191208215140618.png" alt="image-20191208215140618" style="zoom:33%;" />
 
 ​		从直觉上看，研究团队有理由相信，深度双向模型比left-to-right 模型或left-to-right and right-to-left模型的浅层连接更强大。遗憾的是，标准条件语言模型只能从左到右或从右到左进行训练，因为双向条件作用将允许每个单词在多层上下文中间接地“see itself”。
 
@@ -332,7 +332,7 @@
 
 ### Task2: Next Sentence Prediction
 
-<img src="/Users/zhengxinzhi/typora_img/BERT及ERNIE学习/image-20191208215158836.png" alt="image-20191208215158836" style="zoom:33%;" />
+<img src="http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/BERT及ERNIE学习/image-20191208215158836.png" alt="image-20191208215158836" style="zoom:33%;" />
 
 ​		许多重要的下游任务，如问答（QA）和自然语言推理（NLI）都是基于理解两个句子之间的关系，这并没有通过语言建模直接获得。
 
@@ -414,23 +414,23 @@ https://huggingface.co/transformers/index.html
 
 ## 5.7 BERT应用场景
 
-<img src="/Users/zhengxinzhi/typora_img/BERT及ERNIE学习/image-20191208215346001.png" alt="image-20191208215346001" style="zoom:33%;" />
+<img src="http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/BERT及ERNIE学习/image-20191208215346001.png" alt="image-20191208215346001" style="zoom:33%;" />
 
-<img src="/Users/zhengxinzhi/typora_img/BERT及ERNIE学习/image-20191208215304715.png" alt="image-20191208215304715" style="zoom:33%;" />
+<img src="http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/BERT及ERNIE学习/image-20191208215304715.png" alt="image-20191208215304715" style="zoom:33%;" />
 
 自然语言推理任务，给定一个前提／假设，得到推论是否正确：
 
-<img src="/Users/zhengxinzhi/typora_img/BERT及ERNIE学习/image-20191208215400671.png" alt="image-20191208215400671" style="zoom:33%;" />
+<img src="http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/BERT及ERNIE学习/image-20191208215400671.png" alt="image-20191208215400671" style="zoom:33%;" />
 
 最后一个例子是抽取式QA，抽取式的意思是输入一个原文和问题，输出两个整数start和end，代表答案在原文中的起始位置和结束位置，两个位置中间的结果就是答案。
 
-<img src="/Users/zhengxinzhi/typora_img/BERT及ERNIE学习/image-20191208215416913.png" alt="image-20191208215416913" style="zoom:33%;" />
+<img src="http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/BERT及ERNIE学习/image-20191208215416913.png" alt="image-20191208215416913" style="zoom:33%;" />
 
 具体怎么解决刚才的QA问题呢？把问题 - 分隔符 - 原文输入到BERT中，每一个单词输出一个黄颜色的embedding，这里还需要学习两个（一个橙色一个蓝色）的向量，这两个向量分别与原文中每个单词对应的embedding进行点乘，经过softmax之后得到输出最高的位置。正常情况下start <= end，但如果start > end的话，说明是矛盾的case，此题无解。
 
-<img src="/Users/zhengxinzhi/typora_img/BERT及ERNIE学习/image-20191208215445383.png" alt="image-20191208215445383" style="zoom:33%;" />
+<img src="http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/BERT及ERNIE学习/image-20191208215445383.png" alt="image-20191208215445383" style="zoom:33%;" />
 
-<img src="/Users/zhengxinzhi/typora_img/BERT及ERNIE学习/image-20191208215502952.png" alt="image-20191208215502952" style="zoom:33%;" />
+<img src="http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/BERT及ERNIE学习/image-20191208215502952.png" alt="image-20191208215502952" style="zoom:33%;" />
 
 ## 5.8 实验部分
 
@@ -438,7 +438,7 @@ https://huggingface.co/transformers/index.html
 
 Bert学到了什么呢？可以看下下面两个文献（给大伙贴出来：[https://arxiv.org/abs/1905.05950](https://links.jianshu.com/go?to=https%3A%2F%2Farxiv.org%2Fabs%2F1905.05950) 和[https://openreview.net/pdf?id=SJzSgnRcKX](https://links.jianshu.com/go?to=https%3A%2F%2Fopenreview.net%2Fpdf%3Fid%3DSJzSgnRcKX)）：
 
-<img src="/Users/zhengxinzhi/typora_img/BERT及ERNIE学习/image-20191208215617289.png" alt="image-20191208215617289" style="zoom:50%;" />
+<img src="http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/BERT及ERNIE学习/image-20191208215617289.png" alt="image-20191208215617289" style="zoom:50%;" />
 
 # 六、ERNIE
 
@@ -454,11 +454,11 @@ Bert学到了什么呢？可以看下下面两个文献（给大伙贴出来：[
 
 ​		ERNIE 的训练语料引入了多源数据知识。除了百科类文章建模，还对新闻资讯类、论坛对话类数据进行学习。
 
-<img src="/Users/zhengxinzhi/typora_img/BERT及ERNIE学习/image-20191209192417190.png" alt="image-20191209192417190" style="zoom: 50%;" />
+<img src="http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/BERT及ERNIE学习/image-20191209192417190.png" alt="image-20191209192417190" style="zoom: 50%;" />
 
 ### 6.1.2 训练过程改进(Knowledge Integration)
 
-![image-20191209192829131](/Users/zhengxinzhi/typora_img/BERT及ERNIE学习/image-20191209192829131.png)
+![image-20191209192829131](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/BERT及ERNIE学习/image-20191209192829131.png)
 
 ​		论文提出multi-stage knowledge masking strategy, 按顺序训练Basic-Level Masking, Phrase-Level, Entity-level Masking等过程。
 
@@ -488,7 +488,7 @@ Pytorch版本源码 https://github.com/thunlp/ERNIE
 
 ### 6.2.2 ERNIE Framework
 
-<img src="/Users/zhengxinzhi/typora_img/BERT及ERNIE学习/image-20191209194936017.png" alt="image-20191209194936017" style="zoom: 33%;" />
+<img src="http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/BERT及ERNIE学习/image-20191209194936017.png" alt="image-20191209194936017" style="zoom: 33%;" />
 
 ​		持续的(continual)pretraining过程包括两个步骤。第一步我们通过大数据和先验知识来持续的构造无监督任务。第二步我们增量的通过multi-task learning来更新ERNIE模型。
 
@@ -496,7 +496,7 @@ Pytorch版本源码 https://github.com/thunlp/ERNIE
 
 ​		如上图所示，持续pre-training时不同的task都使用的是完全相同的网络结构来编码上下文的文本信息，这样就可以共享学习到的知识。我们可以使用RNN或者深层的Transformer模型(具体是用Transformer还是RNN都可以，当然更加BERT等的经验，使用Transformer会更好一些)，这些参数在所有的pre-training任务是都会更新。
 
-![image-20191209202306245](/Users/zhengxinzhi/typora_img/BERT及ERNIE学习/image-20191209202306245.png)
+![image-20191209202306245](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/BERT及ERNIE学习/image-20191209202306245.png)
 
 ​		如上图所示，我们的框架有两种损失函数。一种是序列级别的损失，它使用CLS的输出来计算；而另一种是token级别的损失，每一个token都有一个期望的输出，这样就可以用模型预测的和期望的值来计算loss。不同的pre-training task有它自己的损失函数，多个任务的损失函数会组合起来作为本次multi-task pre-training的los
 
@@ -506,7 +506,7 @@ Pytorch版本源码 https://github.com/thunlp/ERNIE
 
 ​		网络结果如下图所示：
 
-![image-20191209202817581](/Users/zhengxinzhi/typora_img/BERT及ERNIE学习/image-20191209202817581.png)
+![image-20191209202817581](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/BERT及ERNIE学习/image-20191209202817581.png)
 
 ### 6.2.4 Pre-training Tasks
 

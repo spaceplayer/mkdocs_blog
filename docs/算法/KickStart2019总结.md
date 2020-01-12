@@ -64,7 +64,7 @@ while (l < r) {
 
 希望答案尽可能大，所以我们需要确保左区间L点符合题目条件（最小），至于R是否符合条件是不确定的，首先判断M点符合与否，符合则将L移到M点，维持了L的True属性，也增大了所要的最小值所在区间，如果不符合，没办法在保持L的True属性情况下移动L，那就移动R。
 
-![img](/Users/zhengxinzhi/typora_img/KickStart2019总结/20160315160400082.png)
+![img](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/KickStart2019总结/20160315160400082.png)
 
 ##### 2.最大值最小化
 
@@ -82,7 +82,7 @@ while (l < r) {
 
 按同样道理分析，维持R的True属性即可。这里的mid就不需要加1了，因为 mid 跟 l 重合时，l = mid + 1;会自增，而当 mid 和 r 重合时 l 也跟 r 重合，结束循环了。
 
-![img](/Users/zhengxinzhi/typora_img/KickStart2019总结/20160611153717723.png)
+![img](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/KickStart2019总结/20160611153717723.png)
 
 #### 注意点
 
@@ -99,7 +99,7 @@ r = mid;
 
 当二分的函数值不是递增/减，而是先增后减或者先减后增时二分就挂了。此时需要三分法，这里直接盗用[hihocoder Problem 1142](http://hihocoder.com/problemset/problem/1142)的图
 
-![img](/Users/zhengxinzhi/typora_img/KickStart2019总结/14281364244078.png)
+![img](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/KickStart2019总结/14281364244078.png)
 
 如图这种情况先减后增有极小，若lm比rm低（即lm对应的函数值 < rm函数值）则极小点（图中最低点）肯定在[ left, rm ] ，反之在[ lm, right ]，剩下就跟二分一样根据大小关系调整区间就行了。那lm和rm取值多少？一个不错的取值是lm为整个区间的1/3点，rm为2/3点，即
 lmid = l + (r - l)/3;
@@ -108,7 +108,7 @@ rmid = r - (r - l)/3;
 
 然后另外一种情况，先增后减有极大：
 
-![img](/Users/zhengxinzhi/typora_img/KickStart2019总结/20160430000457502.png)
+![img](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/KickStart2019总结/20160430000457502.png)
 
 ##### [HDU 2899 Strange fuction](http://acm.hdu.edu.cn/showproblem.php?pid=2899)
 
@@ -139,41 +139,41 @@ int dy[4] = {0, 1, 0, -1};
 
 ### 1.vector map set
 
-![image-20190530161548653](/Users/zhengxinzhi/typora_img/KickStart2019总结/image-20190530161548653.png)
+![image-20190530161548653](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/KickStart2019总结/image-20190530161548653.png)
 
-![image-20190530161643870](/Users/zhengxinzhi/typora_img/KickStart2019总结/image-20190530161643870.png)
+![image-20190530161643870](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/KickStart2019总结/image-20190530161643870.png)
 
-![image-20190530161758169](/Users/zhengxinzhi/typora_img/KickStart2019总结/image-20190530161758169.png)
-
-
-
-![image-20190530162629805](/Users/zhengxinzhi/typora_img/KickStart2019总结/image-20190530162629805.png)
+![image-20190530161758169](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/KickStart2019总结/image-20190530161758169.png)
 
 
 
-![image-20190530162805042](/Users/zhengxinzhi/typora_img/KickStart2019总结/image-20190530162805042.png)
-
-![image-20190530162848960](/Users/zhengxinzhi/typora_img/KickStart2019总结/image-20190530162848960.png)
-
-![image-20190530170257249](/Users/zhengxinzhi/typora_img/KickStart2019总结/image-20190530170257249.png)
-
-![image-20190530170327343](/Users/zhengxinzhi/typora_img/KickStart2019总结/image-20190530170327343.png)
-
-![image-20190530170413210](/Users/zhengxinzhi/typora_img/KickStart2019总结/image-20190530170413210.png)
-
-![image-20190530193638978](/Users/zhengxinzhi/typora_img/KickStart2019总结/image-20190530193638978.png)
-
-![image-20190530194254048](/Users/zhengxinzhi/typora_img/KickStart2019总结/image-20190530194254048.png)
+![image-20190530162629805](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/KickStart2019总结/image-20190530162629805.png)
 
 
 
-![image-20190530194334521](/Users/zhengxinzhi/typora_img/KickStart2019总结/image-20190530194334521.png)
+![image-20190530162805042](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/KickStart2019总结/image-20190530162805042.png)
 
-![image-20190530194400884](/Users/zhengxinzhi/typora_img/KickStart2019总结/image-20190530194400884.png)
+![image-20190530162848960](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/KickStart2019总结/image-20190530162848960.png)
+
+![image-20190530170257249](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/KickStart2019总结/image-20190530170257249.png)
+
+![image-20190530170327343](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/KickStart2019总结/image-20190530170327343.png)
+
+![image-20190530170413210](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/KickStart2019总结/image-20190530170413210.png)
+
+![image-20190530193638978](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/KickStart2019总结/image-20190530193638978.png)
+
+![image-20190530194254048](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/KickStart2019总结/image-20190530194254048.png)
 
 
 
-![image-20190530194951623](/Users/zhengxinzhi/typora_img/KickStart2019总结/image-20190530194951623.png)
+![image-20190530194334521](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/KickStart2019总结/image-20190530194334521.png)
+
+![image-20190530194400884](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/KickStart2019总结/image-20190530194400884.png)
+
+
+
+![image-20190530194951623](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/KickStart2019总结/image-20190530194951623.png)
 
 ### 2.c++ 1s可计算10E7 ~10E8的计算量
 
@@ -226,7 +226,7 @@ memset(dist, -1, sizeof dist)
 
 ### 10.优先级
 
-![image-20190601153824322](/Users/zhengxinzhi/typora_img/KickStart2019总结/image-20190601153824322.png)
+![image-20190601153824322](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/KickStart2019总结/image-20190601153824322.png)
 
 ### 11.int的范围2.1**(10E9)
 
@@ -516,7 +516,7 @@ dist（（x1，y1），（x2，y2））= max（abs（x1 + y1  - （x2 + y2））
 使用二进制搜索，时间复杂度变为O（RClog（R + C）），这对于测试集来说已足够。有一种方法可以通过在网格上单次通过计算上述所有可能K的最小/最大值，然后使用个案工作来确定每个K是否存在可行的新交付办公地点，从而将其提高到O（RC）时间，但这种优化是不必要的
 ```
 
-![image-20190531132117526](/Users/zhengxinzhi/typora_img/KickStart2019总结/image-20190531132117526.png)
+![image-20190531132117526](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/KickStart2019总结/image-20190531132117526.png)
 
 #### 解法
 
@@ -557,7 +557,7 @@ x - y de min max
 
 因为如果遍历所有k点要O(RC)，而固定K点计算未遍历点也要O(RC), 共O(R^2C^2)，复杂度太高，我们找边界点即上面四个数
 
-![image-20190531141601690](/Users/zhengxinzhi/typora_img/KickStart2019总结/image-20190531141601690.png)
+![image-20190531141601690](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/KickStart2019总结/image-20190531141601690.png)
 
 7.计算所有可能的交付办公室到几个边界点的距离，找到最小的 O(RC)**
 
@@ -777,13 +777,13 @@ T = 100。
 
 2.可用贪心策略找出第Q个订单，即第Q个订单相比于其他的订单（即前面的Q-1个订单）没有被前面订单覆盖的最多的订单
 
-![image-20190531202615020](/Users/zhengxinzhi/typora_img/KickStart2019总结/image-20190531202615020.png)
+![image-20190531202615020](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/KickStart2019总结/image-20190531202615020.png)
 
 3.
 
 
 
-![image-20190531194850099](/Users/zhengxinzhi/typora_img/KickStart2019总结/image-20190531194850099.png)
+![image-20190531194850099](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/KickStart2019总结/image-20190531194850099.png)
 
 ##### 解法二 二分答案法 最小问题最大化 [todo]
 
@@ -984,7 +984,7 @@ NEESSWWNESE
 样本案例＃1对应于左上图，样本案例＃2对应于右上图，样本案例＃3对应于下图。在每个图中，黄色方块是机器人开始的方格，而绿色方块是机器人完成的方格。
 ```
 
-![image-20190530115112052](/Users/zhengxinzhi/typora_img/KickStart2019总结/image-20190530115112052.png)
+![image-20190530115112052](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/KickStart2019总结/image-20190530115112052.png)
 
 #### 解法
 
@@ -1396,7 +1396,7 @@ for i in range(1, T + 1):
 
 # KickStart 2018
 
-![image-20190719150120726](/Users/zhengxinzhi/typora_img/KickStart2019总结/image-20190719150120726.png)
+![image-20190719150120726](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/KickStart2019总结/image-20190719150120726.png)
 
 
 
@@ -1626,29 +1626,29 @@ subarrays of the Parameter Array. The i-th exponential-power of subarray Aj, Aj+
 Our task is to calculate(P, +P,+.+Pk) modulo 1000000007
 ```
 
-![image-20190731153828980](/Users/zhengxinzhi/typora_img/KickStart2019总结/image-20190731153828980.png)
+![image-20190731153828980](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/KickStart2019总结/image-20190731153828980.png)
 
-![image-20190731153850970](/Users/zhengxinzhi/typora_img/KickStart2019总结/image-20190731153850970.png)
+![image-20190731153850970](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/KickStart2019总结/image-20190731153850970.png)
 
-![image-20190731154052443](/Users/zhengxinzhi/typora_img/KickStart2019总结/image-20190731154052443.png)
+![image-20190731154052443](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/KickStart2019总结/image-20190731154052443.png)
 
 ### 解法
 
-![image-20190731154142728](/Users/zhengxinzhi/typora_img/KickStart2019总结/image-20190731154142728.png)
+![image-20190731154142728](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/KickStart2019总结/image-20190731154142728.png)
 
-![image-20190731154205050](/Users/zhengxinzhi/typora_img/KickStart2019总结/image-20190731154205050.png)
+![image-20190731154205050](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/KickStart2019总结/image-20190731154205050.png)
 
-![image-20190731154247371](/Users/zhengxinzhi/typora_img/KickStart2019总结/image-20190731154247371.png)
+![image-20190731154247371](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/KickStart2019总结/image-20190731154247371.png)
 
 **快速幂** + **费马小定理**
 
-![fa image-20190731154318098](/Users/zhengxinzhi/typora_img/KickStart2019总结/image-20190731154318098.png)
+![fa image-20190731154318098](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/KickStart2019总结/image-20190731154318098.png)
 
-![image-20190731154331648](/Users/zhengxinzhi/typora_img/KickStart2019总结/image-20190731154331648.png)
+![image-20190731154331648](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/KickStart2019总结/image-20190731154331648.png)
 
-![image-20190731154433685](/Users/zhengxinzhi/typora_img/KickStart2019总结/image-20190731154433685.png)
+![image-20190731154433685](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/KickStart2019总结/image-20190731154433685.png)
 
-![image-20190731154701459](/Users/zhengxinzhi/typora_img/KickStart2019总结/image-20190731154701459.png)
+![image-20190731154701459](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/KickStart2019总结/image-20190731154701459.png)
 
 ```c++
 #include <iostream>
@@ -1713,9 +1713,9 @@ int main(){
 
 #### 题目描述
 
-![image-20190731164630948](/Users/zhengxinzhi/typora_img/KickStart2019总结/image-20190731164630948.png)
+![image-20190731164630948](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/KickStart2019总结/image-20190731164630948.png)
 
-![image-20190731172808795](/Users/zhengxinzhi/typora_img/KickStart2019总结/image-20190731172808795.png)
+![image-20190731172808795](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/KickStart2019总结/image-20190731172808795.png)
 
 
 

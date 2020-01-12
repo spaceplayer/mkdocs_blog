@@ -455,7 +455,7 @@ cat 队列
 
 不用Hash
 
-![image-20190823200547199](/Users/zhengxinzhi/typora_img/ACM/image-20190823200547199.png)
+![image-20190823200547199](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/ACM/image-20190823200547199.png)
 
 
 
@@ -467,7 +467,7 @@ set (额外空间)
 
 ### 两单链表相交
 
-![image-20190823204533138](/Users/zhengxinzhi/typora_img/ACM/image-20190823204533138.png)
+![image-20190823204533138](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/ACM/image-20190823204533138.png)
 
 set法: 先把head1所有的结点放入set, 遍历head2是否在set中存在
 
@@ -475,7 +475,7 @@ set法: 先把head1所有的结点放入set, 遍历head2是否在set中存在
 
 [注]关于环: 一个有环一个无环不相交, 两个环不一样不相交 , 有一个相同的环相交(同一个入口, 两个入口)
 
-![image-20190824093052050](/Users/zhengxinzhi/typora_img/ACM/image-20190824093052050.png)
+![image-20190824093052050](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/ACM/image-20190824093052050.png)
 
 ```java
 	public static class Node {
@@ -802,13 +802,13 @@ public class Code_02_PrintBinaryTree {
 
 ### 在二叉树中找到一个结点的后继结点
 
-![image-20190824113049890](/Users/zhengxinzhi/typora_img/ACM/image-20190824113049890.png)
+![image-20190824113049890](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/ACM/image-20190824113049890.png)
 
 如果该结点有右子树,那么后继结点是它的右子树的最左结点
 
 如果该结点没有右子树,  那么向上查找直到找到一个根节点: 该结点是在这个根节点的左子树上, 这个点就是后继结点
 
-![image-20190824132855423](/Users/zhengxinzhi/typora_img/ACM/image-20190824132855423.png)
+![image-20190824132855423](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/ACM/image-20190824132855423.png)
 
 ```java
 	public static class Node {
@@ -853,11 +853,11 @@ public class Code_02_PrintBinaryTree {
 
 #### 先序序列化(null结点也序列化, 用#表示)
 
-![image-20190824161735514](/Users/zhengxinzhi/typora_img/ACM/image-20190824161735514.png)
+![image-20190824161735514](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/ACM/image-20190824161735514.png)
 
 
 
-![image-20190824161813323](/Users/zhengxinzhi/typora_img/ACM/image-20190824161813323.png)
+![image-20190824161813323](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/ACM/image-20190824161813323.png)
 
 ```java
 	public static class Node {

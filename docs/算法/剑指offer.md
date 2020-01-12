@@ -605,9 +605,9 @@ public class Solution {
 
 #### 解法三 矩阵乘方+空间换时间 TO(logn) 更快但不实用
 
-![image-20190430163510691](/Users/zhengxinzhi/typora_img/剑指offer/image-20190430163510691.png)
+![image-20190430163510691](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/剑指offer/image-20190430163510691.png)
 
-![image-20190430165211762](/Users/zhengxinzhi/typora_img/剑指offer/image-20190430165211762.png)
+![image-20190430165211762](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/剑指offer/image-20190430165211762.png)
 
 ```c++
 //时间复杂度为logN；
@@ -1836,7 +1836,7 @@ public class Solution {
 
 解法三 剑指 offer
 
-![img](/Users/zhengxinzhi/typora_img/剑指offer/412362_1489225139482_4A47A0DB6E60853DEDFCFDF08A5CA249.png)
+![img](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/剑指offer/412362_1489225139482_4A47A0DB6E60853DEDFCFDF08A5CA249.png)
 
 ```java
 /*
@@ -3186,11 +3186,11 @@ public class Solution {
 
   3）由题可知n >= 2，那么n的最大值是多少呢？我们完全可以将n从2到S全部遍历一次，但是大部分遍历是不必要的。为了让n尽可能大，我们让序列从1开始， 
 
-  根据等差数列的求和公式：S = (1 + n) * n / 2，得到![img](/Users/zhengxinzhi/typora_img/剑指offer/5073898_1515927185012_equation). 
+  根据等差数列的求和公式：S = (1 + n) * n / 2，得到![img](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/剑指offer/5073898_1515927185012_equation). 
 
 ​    最后举一个例子，假设输入sum = 100，我们只需遍历n = 13~2的情况（按题意应从大到小遍历），n = 8时，得到序列[9, 10, 11, 12, 13, 14, 15, 16]；n  = 5时，得到序列[18, 19, 20, 21, 22]。 
 
-  完整代码：时间复杂度为![img](/Users/zhengxinzhi/typora_img/剑指offer/5073898_1516868312189_equation)
+  完整代码：时间复杂度为![img](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/剑指offer/5073898_1516868312189_equation)
 
 ```java
 import java.util.ArrayList;

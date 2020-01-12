@@ -73,7 +73,7 @@ void dfs()//参数用来表示状态
 
 ### [算法] 回溯
 
-![image-20190303125851748](/Users/zhengxinzhi/typora_img/LeetCode题目总结/image-20190303125851748.png)
+![image-20190303125851748](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/LeetCode题目总结/image-20190303125851748.png)
 
 
 
@@ -162,7 +162,7 @@ def quickSort(arr,low,high):
 
 ### [算法] 最大团问题 todo
 
-![image-20190313154630103](/Users/zhengxinzhi/typora_img/LeetCode题目总结/image-20190313154630103.png)
+![image-20190313154630103](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/LeetCode题目总结/image-20190313154630103.png)
 
 ### [DATA STRUCTURE] 二叉搜索树
 
@@ -193,7 +193,7 @@ def quickSort(arr,low,high):
 
 下图中的顶点按照访问的顺序编号，按照 1-2-3-4-5 的顺序来比较不同的策略。
 
-![102.png](/Users/zhengxinzhi/typora_img/LeetCode题目总结/b61ff2d47852e4264f5dfe0a5b00101bdeca2b0ba216aa83ca3cb6fac42ebb84-102.png)
+![102.png](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/LeetCode题目总结/b61ff2d47852e4264f5dfe0a5b00101bdeca2b0ba216aa83ca3cb6fac42ebb84-102.png)
 
 ### [DATA STRUCTURE] 前缀树 
 
@@ -615,7 +615,7 @@ sorted(intervals, key=lambda x: (x[0], x[1]))
 性质：
 	如果已知图存在欧拉回路，那么你可以从任何一点开始欧拉回路
 
-![image-20190801145102677](/Users/zhengxinzhi/typora_img/LeetCode题目总结/image-20190801145102677.png)
+![image-20190801145102677](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/LeetCode题目总结/image-20190801145102677.png)
 
 ##### Java python 负数除法  
 
@@ -989,7 +989,7 @@ class Solution:
 
 69.2.2 方法二 牛顿迭代法
 
-![image-20190312200259083](/Users/zhengxinzhi/typora_img/LeetCode%E9%A2%98%E7%9B%AE%E6%80%BB%E7%BB%93/image-20190312200259083.png)
+![image-20190312200259083](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/LeetCode%E9%A2%98%E7%9B%AE%E6%80%BB%E7%BB%93/image-20190312200259083.png)
 
 ```python
 def mySqrt(self, n: int) -> int:
@@ -1028,7 +1028,7 @@ def mySqrt(self, n: int) -> int:
 #### 解法
 
 ##### 解法一  长除法
-![image-20190718204610748](/Users/zhengxinzhi/typora_img/LeetCode题目总结/image-20190718204610748.png)
+![image-20190718204610748](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/LeetCode题目总结/image-20190718204610748.png)
 
 ```java
 class Solution {
@@ -1292,7 +1292,7 @@ def diffWaysToCompute(self, input):
 #### 2.解法
 ##### 2.2 方法二 公式 不通用
 
-![{\displaystyle \operatorname {dr} (/Users/zhengxinzhi/typora_img/LeetCode题目总结/8aabde69a31053c2a3a769183ef1fea68b7ee49d)={\begin{cases}0&{\mbox{if))\ n=0,\\9&{\mbox{if))\ n\neq 0,\ n\ \equiv 0{\pmod {9)),\\n\ {\rm {mod))\ 9&{\mbox{if))\ n\not \equiv 0{\pmod {9))\end{cases))}](https://wikimedia.org/api/rest_v1/media/math/render/svg/8aabde69a31053c2a3a769183ef1fea68b7ee49d)
+![{\displaystyle \operatorname {dr} (http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/LeetCode题目总结/8aabde69a31053c2a3a769183ef1fea68b7ee49d)={\begin{cases}0&{\mbox{if))\ n=0,\\9&{\mbox{if))\ n\neq 0,\ n\ \equiv 0{\pmod {9)),\\n\ {\rm {mod))\ 9&{\mbox{if))\ n\not \equiv 0{\pmod {9))\end{cases))}](https://wikimedia.org/api/rest_v1/media/math/render/svg/8aabde69a31053c2a3a769183ef1fea68b7ee49d)
 
 对于基数b（十进制情况b = 10），整数的数字根是：
 
@@ -1536,7 +1536,7 @@ class Solution:
 
 题目变形
 
-![image-20190709141227932](/Users/zhengxinzhi/typora_img/LeetCode题目总结/image-20190709141227932.png)
+![image-20190709141227932](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/LeetCode题目总结/image-20190709141227932.png)
 
 ```python
 import queue
@@ -2085,7 +2085,7 @@ class Solution {
 
 ##### 5.2.1 方法一 DP O(n**2)
 
-![image-20190713175743436](/Users/zhengxinzhi/typora_img/LeetCode题目总结/image-20190713175743436.png)
+![image-20190713175743436](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/LeetCode题目总结/image-20190713175743436.png)
 
 ```java
 import java.util.Arrays;
@@ -3651,7 +3651,7 @@ class Solution:
 
 该题目画图更容易
 
-![ Next Permutation ](/Users/zhengxinzhi/typora_img/LeetCode题目总结/dd4e79b184b1922429d8cda6148a3f0b7579869e85626e04ba29ba88e8052729-file_1555696116786.png)
+![ Next Permutation ](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/LeetCode题目总结/dd4e79b184b1922429d8cda6148a3f0b7579869e85626e04ba29ba88e8052729-file_1555696116786.png)
 
 ```
 首先，我们观察到对于任何给定序列的降序，没有可能的下一个更大的排列。
@@ -4004,7 +4004,7 @@ class Solution {
 
 2.计算某一层如何旋转
 
-![48_rectangles.png](/Users/zhengxinzhi/typora_img/LeetCode题目总结/7a684b207a95188ff6450e4724d6ee8bdf425fc483775a8e30082ed25060dac1-48_rectangles.png)
+![48_rectangles.png](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/LeetCode题目总结/7a684b207a95188ff6450e4724d6ee8bdf425fc483775a8e30082ed25060dac1-48_rectangles.png)
 
 ```python
 class Solution:
@@ -5394,7 +5394,7 @@ class Solution:
 
 ##### 169.2.4 方法四 random (预期时间复杂度线性)
 
-![image-20190323154354074](/Users/zhengxinzhi/typora_img/LeetCode%E9%A2%98%E7%9B%AE%E6%80%BB%E7%BB%93/image-20190323154354074.png)
+![image-20190323154354074](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/LeetCode%E9%A2%98%E7%9B%AE%E6%80%BB%E7%BB%93/image-20190323154354074.png)
 
 ```python
 import random
@@ -5416,7 +5416,7 @@ class Solution:
 
 在剑指 offer中不成立，因为没有保证数组中总存在众数
 
-![image-20190323155144541](/Users/zhengxinzhi/typora_img/LeetCode%E9%A2%98%E7%9B%AE%E6%80%BB%E7%BB%93/image-20190323155144541.png)
+![image-20190323155144541](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/LeetCode%E9%A2%98%E7%9B%AE%E6%80%BB%E7%BB%93/image-20190323155144541.png)
 
 ```python
     def majorityElement(self, nums):
@@ -5472,7 +5472,7 @@ public int majorityElement(int[] nums) {
 
 ##### 2.1 方法一 双指针
 
-![image-20191012154509633](/Users/zhengxinzhi/typora_img/LeetCode题目总结/image-20191012154509633.png)
+![image-20191012154509633](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/LeetCode题目总结/image-20191012154509633.png)
 
 ```python
     def minSubArrayLen(self, s: int, nums: List[int]) -> int:
@@ -6269,7 +6269,7 @@ class NumArray:
 
 给定一个二维矩阵，计算其子矩形范围内元素的总和，该子矩阵的左上角为 (row1, col1) ，右下角为 (row2, col2)。
 
-![Range Sum Query 2D](/Users/zhengxinzhi/typora_img/LeetCode题目总结/304.png)
+![Range Sum Query 2D](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/LeetCode题目总结/304.png)
 
 
 上图子矩阵左上角 (row1, col1) = (2, 1) ，右下角(row2, col2) = (4, 3)，该子矩形内元素的总和为 8。
@@ -6658,7 +6658,7 @@ class Solution:
         return [item[1] for item in heapq.nlargest(k, heap)]
 ```
 
-![image-20190313201418135](/Users/zhengxinzhi/typora_img/LeetCode%E9%A2%98%E7%9B%AE%E6%80%BB%E7%BB%93/image-20190313201418135.png)
+![image-20190313201418135](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/LeetCode%E9%A2%98%E7%9B%AE%E6%80%BB%E7%BB%93/image-20190313201418135.png)
 
 ##### 347.2.2 方法二 hash+桶排序
 
@@ -8002,7 +8002,7 @@ class Solution(object):
 
 我们可以看下图作为参考。我们观察到上升还是下降决定了相对顺序，我们还可以观察到指针 bb 在下标 0 后面标记着无序子数组的左边界，指针 aa 在下标 7 前面标记着无序子数组的右边界。
 
-![image.png](/Users/zhengxinzhi/typora_img/LeetCode题目总结/5c6b77b2f1cf11fbd4607ed0b407d25e1fb76eaef1486fd3cd3292ced9829e6e-image.png)
+![image.png](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/LeetCode题目总结/5c6b77b2f1cf11fbd4607ed0b407d25e1fb76eaef1486fd3cd3292ced9829e6e-image.png)
 
 ```python
 class Solution:
@@ -8038,7 +8038,7 @@ class Solution:
 
 我们可以再次使用下图作为说明：
 
-![image.png](/Users/zhengxinzhi/typora_img/LeetCode题目总结/5c6b77b2f1cf11fbd4607ed0b407d25e1fb76eaef1486fd3cd3292ced9829e6e-image.png)
+![image.png](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/LeetCode题目总结/5c6b77b2f1cf11fbd4607ed0b407d25e1fb76eaef1486fd3cd3292ced9829e6e-image.png)
 
 ```python
 class Solution:
@@ -8910,7 +8910,7 @@ Time Complexity: O(NK)
 
 Space Complexity: O(NK)
 
-![Anagrams](/Users/zhengxinzhi/typora_img/LeetCode%E9%A2%98%E7%9B%AE%E6%80%BB%E7%BB%93/49_groupanagrams2.png)
+![Anagrams](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/LeetCode%E9%A2%98%E7%9B%AE%E6%80%BB%E7%BB%93/49_groupanagrams2.png)
 
 ```python
 class Solution(object):
@@ -9049,9 +9049,9 @@ public class Solution {
 
 ##### 290.2.2 方法二
 
-![image-20190507153942703](/Users/zhengxinzhi/typora_img/LeetCode题目总结/image-20190507153942703.png)
+![image-20190507153942703](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/LeetCode题目总结/image-20190507153942703.png)
 
-![image-20190507154356567](/Users/zhengxinzhi/typora_img/LeetCode题目总结/image-20190507154356567.png)
+![image-20190507154356567](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/LeetCode题目总结/image-20190507154356567.png)
 
 
 
@@ -9137,7 +9137,7 @@ class Solution {
 
 给出数字到字母的映射如下（与电话按键相同）。注意 1 不对应任何字母。
 
-![img](/Users/zhengxinzhi/typora_img/LeetCode题目总结/200px-Telephone-keypad2.svg.png)
+![img](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/LeetCode题目总结/200px-Telephone-keypad2.svg.png)
 
 **示例:**
 
@@ -9299,7 +9299,7 @@ class Solution:
 ② 开始递归，递归中携带加入新元素的 temp，并且下一次循环的起始是 i 元素的下一个，因而递归中更新 i 值为 i + 1
 ③ 将这个从中间集合 temp 中移除，使该元素处于不存在状态**
 
-![image-20190226224406196](/Users/zhengxinzhi/typora_img/LeetCode题目总结/image-20190226224406196.png)
+![image-20190226224406196](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/LeetCode题目总结/image-20190226224406196.png)
 
 ```python
 ** 清晰 ** 推荐 **
@@ -9344,9 +9344,9 @@ class Solution:
 
 本题使用到 & and <<
 
-![image-20190226232758000](/Users/zhengxinzhi/typora_img/LeetCode题目总结/image-20190226232758000.png)
+![image-20190226232758000](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/LeetCode题目总结/image-20190226232758000.png)
 
-![image-20190226233159527](/Users/zhengxinzhi/typora_img/LeetCode题目总结/image-20190226233159527.png)
+![image-20190226233159527](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/LeetCode题目总结/image-20190226233159527.png)
 
 ```c++
 public:
@@ -9946,11 +9946,11 @@ public class Solution {
 
 ##### 47.2.2 回溯(基于各字母的数量)
 
-![image-20190309115418571](/Users/zhengxinzhi/typora_img/LeetCode%E9%A2%98%E7%9B%AE%E6%80%BB%E7%BB%93/image-20190309115418571.png)
+![image-20190309115418571](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/LeetCode%E9%A2%98%E7%9B%AE%E6%80%BB%E7%BB%93/image-20190309115418571.png)
 
-![image-20190309120347808](/Users/zhengxinzhi/typora_img/LeetCode%E9%A2%98%E7%9B%AE%E6%80%BB%E7%BB%93/image-20190309120347808.png)
+![image-20190309120347808](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/LeetCode%E9%A2%98%E7%9B%AE%E6%80%BB%E7%BB%93/image-20190309120347808.png)
 
-![image-20190309120949430](/Users/zhengxinzhi/typora_img/LeetCode%E9%A2%98%E7%9B%AE%E6%80%BB%E7%BB%93/image-20190309120949430.png)
+![image-20190309120949430](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/LeetCode%E9%A2%98%E7%9B%AE%E6%80%BB%E7%BB%93/image-20190309120949430.png)
 
 ##### 47.2.3 (todo: )
 
@@ -10112,7 +10112,7 @@ class Solution(object):
 
 n* 皇后问题研究的是如何将 *n* 个皇后放置在 *n*×*n* 的棋盘上，并且使皇后彼此之间不能相互攻击。
 
-![image-20190302180821649](/Users/zhengxinzhi/typora_img/LeetCode题目总结/image-20190302180821649.png)
+![image-20190302180821649](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/LeetCode题目总结/image-20190302180821649.png)
 
 上图为 8 皇后问题的一种解法。
 
@@ -10256,15 +10256,15 @@ private:
 
 ##### 52.2.3 方法三(推荐掌握 很规范)
 
-![image-20190303125851748](/Users/zhengxinzhi/typora_img/LeetCode题目总结/image-20190303125851748.png)
+![image-20190303125851748](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/LeetCode题目总结/image-20190303125851748.png)
 
 https://www.youtube.com/watch?v=wGbuCyNpxIg
 
-![image-20190303130609856](/Users/zhengxinzhi/typora_img/LeetCode题目总结/image-20190303130609856.png)
+![image-20190303130609856](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/LeetCode题目总结/image-20190303130609856.png)
 
 
 
-![image-20190303130854776](/Users/zhengxinzhi/typora_img/LeetCode题目总结/image-20190303130854776.png)
+![image-20190303130854776](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/LeetCode题目总结/image-20190303130854776.png)
 
 ##### 52.2.4 方法四
 
@@ -10424,7 +10424,7 @@ class Solution:
 
 ##### 解法二 镜面反射法(动态规划) O(2**n)
 
-![image-20191021095951684](/Users/zhengxinzhi/typora_img/LeetCode题目总结/image-20191021095951684.png)
+![image-20191021095951684](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/LeetCode题目总结/image-20191021095951684.png)
 
 ```python
 class Solution:
@@ -11928,7 +11928,7 @@ class Solution(object):
 
 示例：
 
-![img](/Users/zhengxinzhi/typora_img/LeetCode题目总结/1470150906153-2yxeznm.png)
+![img](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/LeetCode题目总结/1470150906153-2yxeznm.png)
 
 输入：
 {"$id":"1","next":{"$id":"2","next":null,"random":{"$ref":"2"},"val":2},"random":{"$ref":"2"},"val":1}
@@ -13384,7 +13384,7 @@ public:
 };
 ```
 
-![image-20190326124540247](/Users/zhengxinzhi/typora_img/LeetCode题目总结/image-20190326124540247.png)
+![image-20190326124540247](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/LeetCode题目总结/image-20190326124540247.png)
 
 ### 114. 二叉树展开为链表
 
@@ -13455,7 +13455,7 @@ struct Node {
 
 初始状态下，所有 next 指针都被设置为 NULL。
 
-![img](/Users/zhengxinzhi/typora_img/LeetCode题目总结/116_sample.png)
+![img](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/LeetCode题目总结/116_sample.png)
 
 
 
@@ -13590,7 +13590,7 @@ struct Node {
 
 示例：
 
-![img](/Users/zhengxinzhi/typora_img/LeetCode题目总结/117_sample.png)
+![img](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/LeetCode题目总结/117_sample.png)
 
 输入：{"$id":"1","left":{"$id":"2","left":{"$id":"3","left":null,"next":null,"right":null,"val":4},"next":null,"right":{"$id":"4","left":null,"next":null,"right":null,"val":5},"val":2},"next":null,"right":{"$id":"5","left":null,"next":null,"right":{"$id":"6","left":null,"next":null,"right":null,"val":7},"val":3},"val":1}
 
@@ -14742,7 +14742,7 @@ class Solution:
 
 如果使用两个同时进行的广搜可以有效地减少搜索空间。一边从 beginWord 开始，另一边从 endWord 开始。我们每次从两边各扩展一个节点，当发现某一时刻两边都访问了某一顶点时就停止搜索。这就是双向广度优先搜索，它可以可观地减少搜索空间大小，从而降低时间和空间复杂度。
 
-![Word_Ladder_3.png](/Users/zhengxinzhi/typora_img/LeetCode%E9%A2%98%E7%9B%AE%E6%80%BB%E7%BB%93/be92086801e264f49bb1c01593dbfee5b08e52c600b62576c5fa0c1ef2d54eb8-Word_Ladder_3.png)
+![Word_Ladder_3.png](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/LeetCode%E9%A2%98%E7%9B%AE%E6%80%BB%E7%BB%93/be92086801e264f49bb1c01593dbfee5b08e52c600b62576c5fa0c1ef2d54eb8-Word_Ladder_3.png)
 
 算法
 
@@ -14840,7 +14840,7 @@ class Solution(object):
 
 示例：
 
-![img](/Users/zhengxinzhi/typora_img/LeetCode题目总结/113_sample.png)
+![img](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/LeetCode题目总结/113_sample.png)
 
 输入：
 {"$id":"1","neighbors":[{"$id":"2","neighbors":[{"$ref":"1"},{"$id":"3","neighbors":[{"$ref":"2"},{"$id":"4","neighbors":[{"$ref":"3"},{"$ref":"1"}],"val":4}],"val":3}],"val":2},{"$ref":"4"}],"val":1}
@@ -16681,7 +16681,7 @@ class Solution:
 
 与此数组对应的图形是：
 
-![Profit Graph](/Users/zhengxinzhi/typora_img/LeetCode%E9%A2%98%E7%9B%AE%E6%80%BB%E7%BB%93/6eaf01901108809ca5dfeaef75c9417d6b287c841065525083d1e2aac0ea1de4-file_1555699697692.png)
+![Profit Graph](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/LeetCode%E9%A2%98%E7%9B%AE%E6%80%BB%E7%BB%93/6eaf01901108809ca5dfeaef75c9417d6b287c841065525083d1e2aac0ea1de4-file_1555699697692.png)
 
 ```python
 class Solution {
@@ -17001,7 +17001,7 @@ public class Solution {
 
 ##### 2.2 方法二
 
-![image-20191113190852244](/Users/zhengxinzhi/typora_img/LeetCode题目总结/image-20191113190852244.png)
+![image-20191113190852244](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/LeetCode题目总结/image-20191113190852244.png)
 
 ```java
 public class Solution {
@@ -17159,7 +17159,7 @@ sumRange(0, 5) -> -3
 #### 303.2.解法
 ##### 303.2.1 方法一 DP
 
-![image-20190512122106668](/Users/zhengxinzhi/typora_img/LeetCode题目总结/image-20190512122106668.png)
+![image-20190512122106668](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/LeetCode题目总结/image-20190512122106668.png)
 
 ```java
 class NumArray {
@@ -17261,7 +17261,7 @@ class Solution:
 
 ##### 解法二 dp hold unhold
 
-![image-20191024105512040](/Users/zhengxinzhi/typora_img/LeetCode题目总结/image-20191024105512040.png)
+![image-20191024105512040](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/LeetCode题目总结/image-20191024105512040.png)
 
 ```python
 class Solution:
@@ -17304,7 +17304,7 @@ class Solution:
 
 ##### 2.3 方法三
 
-![image-20191113192711202](/Users/zhengxinzhi/typora_img/LeetCode题目总结/image-20191113192711202.png)
+![image-20191113192711202](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/LeetCode题目总结/image-20191113192711202.png)
 
 ##### 方法三
 
@@ -17648,6 +17648,62 @@ class Solution(object):
         return max(dp,key=len)
 ```
 
+### [392. 判断子序列](https://leetcode-cn.com/problems/is-subsequence/)
+
+#### 题目描述
+
+给定字符串 s 和 t ，判断 s 是否为 t 的子序列。
+
+你可以认为 s 和 t 中仅包含英文小写字母。字符串 t 可能会很长（长度 ~= 500,000），而 s 是个短字符串（长度 <=100）。
+
+字符串的一个子序列是原始字符串删除一些（也可以不删除）字符而不改变剩余字符相对位置形成的新字符串。（例如，"ace"是"abcde"的一个子序列，而"aec"不是）。
+
+示例 1:
+s = "abc", t = "ahbgdc"
+
+返回 true.
+
+示例 2:
+s = "axc", t = "ahbgdc"
+
+返回 false.
+
+后续挑战 :
+
+如果有大量输入的 S，称作S1, S2, ... , Sk 其中 k >= 10亿，你需要依次检查它们是否为 T 的子序列。在这种情况下，你会怎样改变代码？
+
+
+#### 解法
+
+##### 解法一 双指针 O(N)
+```python
+class Solution:
+    def isSubsequence(self, s: str, t: str) -> bool:
+        """
+            子序列
+        """
+        i = 0
+        j = 0
+        while i < len(s) and j < len(t):
+            if s[i] == t[j]:
+                i += 1
+            j += 1
+        return i == len(s)
+```
+
+##### 解法二 ?
+```python
+class Solution:
+    def isSubsequence(self, s: str, t: str) -> bool:
+        for cs in s:
+            if cs not in t:
+                return False
+            else:
+                t = t[t.index(cs)+1:]
+        return True
+                
+```
+
 ### 746.使用最小花费爬楼梯
 
 #### 746.1.题目描述
@@ -17707,7 +17763,7 @@ class Solution {
 
 ##### 746.2.2 方法二 
 
-![image-20190512125230728](/Users/zhengxinzhi/typora_img/LeetCode题目总结/image-20190512125230728.png)
+![image-20190512125230728](http://spaceplayer.oss-cn-beijing.aliyuncs.com/spaceplayer/typora_img/LeetCode题目总结/image-20190512125230728.png)
 
 ```java
 class Solution {
