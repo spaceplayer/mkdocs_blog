@@ -7944,6 +7944,72 @@ class Solution(object):
         return res
 ```
 
+### [567. 字符串的排列](https://leetcode-cn.com/problems/permutation-in-string/)
+
+#### 题目描述
+
+给定两个字符串 s1 和 s2，写一个函数来判断 s2 是否包含 s1 的排列。
+
+换句话说，第一个字符串的排列之一是第二个字符串的子串。
+
+示例1:
+
+输入: s1 = "ab" s2 = "eidbaooo"
+输出: True
+解释: s2 包含 s1 的排列之一 ("ba").
+
+
+示例2:
+
+输入: s1= "ab" s2 = "eidboaoo"
+输出: False
+
+
+注意：
+
+输入的字符串只包含小写字母
+两个字符串的长度都在 [1, 10,000] 之间
+
+
+#### 解法
+
+##### 解法一 统计词频
+```python
+class Solution:
+    def checkInclusion(self, s1: str, s2: str) -> bool:
+        """
+        1.s1预处理生成所有的排列是指数级别复杂度
+        2.统计子字符串的各字符数量
+        """
+        if len(s1) > len(s2):
+            return False
+
+        def get_char_num(s):
+            char_dic = [0] *26
+            for c in s:
+                char_dic[ord(c) - ord('a')] += 1
+            return char_dic
+
+        i, j = 0, len(s1)
+        s1_dic = get_char_num(s1)
+        s2_dic = get_char_num(s2[i: j])
+        if s2_dic == s1_dic:
+            return True
+        while j < len(s2):
+            s2_dic[ord(s2[j]) - ord('a')] += 1
+            s2_dic[ord(s2[i]) - ord('a')] -= 1
+            if s2_dic == s1_dic:
+                return True
+            i += 1
+            j += 1
+        return False
+```
+
+##### 解法二 在第一种解法上优化
+```python
+
+```
+
 ### [581. 最短无序连续子数组](https://leetcode-cn.com/problems/shortest-unsorted-continuous-subarray/)
 
 #### 题目描述
@@ -17965,3 +18031,4 @@ class LRUCache:
 
 ```
 
+[****]()
